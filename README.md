@@ -82,3 +82,89 @@ export default () => (
 ```
 
 </details>
+
+
+
+
+
+
+# Alurakut
+
+## Criar app Next simplificado
+yarn create-next-app --example with-styled-components
+
+## Executar app
+yarn dev
+
+
+
+
+
+## Dicas
+
+### Reset CSS
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+### Reset IMG
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+
+
+## Sintaxe
+
+### importando lib
+import React from 'react';
+
+### importando lib que exporta vários elementos
+import { createGlobalStyle, ThemeProvider } from 'styled-components'
+
+### Criando componente com css
+const Box = styled.div`
+  background: #FFFFF;
+`;
+
+### Usando CSS diretamente no componente
+<Box style={{ gridArea: 'profileArea' }}>
+  Componente box
+</Box>
+
+### Classe no componente
+<div className="profileArea"></div>
+
+### Usando string no componente
+<a href="www.link.com"></a>
+
+### Usando variável no componente
+<a href={link}></a>
+
+### Usar classe no componente
+<img src={`https://github.com/${githubUser}.png`} /> (nesse exemplo, a sintaxe exclusiva do react é só o {} externo, o `` é Javascript)
+
+### Passar uma propriedade (props) no componente
+<ProfileSidebar githubUser={githubUser} />
+
+### Colocar mais de uma tag dentro de um return (os <></> são descartados pelo browser)
+return (
+  <>
+    <div></div>
+    <div></div>
+  </>
+)
+
+### Importante css de libs (bibliotecas)
+import { AlurakutStyles } from '../src/lib/AluraCommons'
+const GlobalStyle = createGlobalStyle`
+  ${AlurakutStyles}
+`
+
+### Criando componente que estiliza outro componente criado
+export const Componente1 = styled(Componente2)`
