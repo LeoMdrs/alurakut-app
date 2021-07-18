@@ -121,6 +121,15 @@ img {
 ### Nomear funções de forma que ajude a desenvolvedores react entender
 Ex.: Usar palavra handle para funções de pegar/capturar ação
 
+## Promise
+Um objeto usado para processamento assíncrono. Um Promise ( de "promessa") representa um valor que pode estar disponível agora, no futuro ou nunca.
+
+## useEffect()
+Hook que gerencia os efeitos colaterais nos componentes funcionais do React
+
+## Fetch()
+A API Fetch fornece uma interface JavaScript para acessar e manipular partes do pipeline HTTP, tais como os pedidos e respostas. Ela também fornece o método global fetch() que fornece uma maneira fácil e lógica para buscar recursos de forma assíncrona através da rede
+
 
 
 
@@ -205,3 +214,9 @@ const comunidade = ['valor1', 'valor2']
 
 #### Transformar um componente em outro (as)
 <Box as="aside"> (transforma o componente Box em um componente aside, que é padrão do HTML5)
+
+#### e.preventDefault()
+<form onSubmit={function handleCriaComunidade(e) {
+  // Previne de recarregar a tela ao dar submit no formulário
+  e.preventDefault();
+}}>
