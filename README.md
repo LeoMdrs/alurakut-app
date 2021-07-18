@@ -100,6 +100,8 @@ yarn dev
 
 
 
+
+
 ## Dicas
 
 ### Reset CSS
@@ -115,6 +117,11 @@ img {
   height: auto;
   display: block;
 }
+
+### Nomear funções de forma que ajude a desenvolvedores react entender
+Ex.: Usar palavra handle para funções de pegar/capturar ação
+
+
 
 
 
@@ -168,3 +175,33 @@ const GlobalStyle = createGlobalStyle`
 
 ### Criando componente que estiliza outro componente criado
 export const Componente1 = styled(Componente2)`
+
+### React.useState()
+
+#### Importação
+import React from 'react'
+
+#### Retorno
+React.useState retorna duas coisas: na primeira posição (índice [0]) um array e na segunda (índice [1]) uma função que altera esse array. As variáveis definidas dentro do [ , ] vão receber esses valores, respectivamente.
+const [comunidades, setComunidades] = React.useState(['Alurakut']);
+
+#### Spread (...) no JavaScript
+O spread (...) adiciona/espalha um array existente em uma nova estrutura
+Ex.:
+arrayAntigo = ['valor1', 'valor2']
+novoArray = [...arrayAntigo, 'valor3']
+
+é o mesmo que:
+novoArray = ['valor1', 'valor2', 'valor3']
+
+#### Declarar Objeto
+const comunidade = {
+  title: 'titulo',
+  image: 'url',
+}
+
+#### Declarar Array
+const comunidade = ['valor1', 'valor2']
+
+#### Transformar um componente em outro (as)
+<Box as="aside"> (transforma o componente Box em um componente aside, que é padrão do HTML5)
