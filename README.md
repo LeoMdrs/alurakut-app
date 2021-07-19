@@ -104,6 +104,9 @@ yarn dev
 
 ## Dicas
 
+### Pasta pages
+Pasta super importante para o Next. Colocar apenas arquivos importantes, de configuração de páginas, roteamento, etc...
+
 ### Reset CSS
 * {
   margin: 0;
@@ -220,3 +223,50 @@ const comunidade = ['valor1', 'valor2']
   // Previne de recarregar a tela ao dar submit no formulário
   e.preventDefault();
 }}>
+
+### JSON.stringify()
+converte um valor para uma notação JSON que o representa
+
+
+
+
+
+## Dato CMS
+
+### GraphQL
+Linguagem usada para acessar api's no Dato CMS
+
+### Comando sugerir
+ctrl + d ou ctrl + espaço
+
+### Instalar o cliente NodeJS (para criar bff - mini backend que acessa api)
+yarn add datocms-client
+
+### API
+// API GraphQL
+fetch('https://graphql.datocms.com/', {
+  method: 'POST',
+  headers: {
+    'Authorization': 'token',
+    'Content-Type': 'application/json',
+    'Accept': 'application/json',
+  },
+  body: JSON.stringify({
+    "query": `query {
+    allCommunities {
+      id 
+      title
+      imageUrl
+      creatorSlug
+    }
+  }` })
+})
+  .then((response) => response.json()) // Pega o retorno do response.json() e já retorna
+  .then((respostaCompleta) => {
+    const comunidadesVindasDoDato = respostaCompleta.data.allCommunities;
+    console.log(comunidadesVindasDoDato)
+    setComunidades(comunidadesVindasDoDato)
+  })
+// .then(function (response) {
+//   return response.json()
+// })
