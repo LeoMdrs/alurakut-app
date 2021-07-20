@@ -1,3 +1,46 @@
+# Alurakut: Leandro Rangel 
+
+[![Série](https://img.shields.io/badge/LeoMdrs-Alurakut--App-green](https://github.com/LeoMdrs/alurakut-app)
+[![licence mit](https://img.shields.io/github/license/LeoMdrs/alurakut-app)](https://github.com/LeoMdrs/alurakut-app/blob/main/LICENSE)
+
+> Projeto de App clone da rede social Orkut desenvolvido durante a Imersão React da Alura
+> 
+> Para ver o projeto em execução acesse a [**DEMO**](https://alurakut-app-brown.vercel.app/login/)
+
+<p align="center">
+  <img alt="Tela de login do projeto" src="./src/assets/images/tela-login.jpeg" />
+</p>
+
+
+## Versioning/Versionamento
+
+Esse projeto não possui um sistema de versionamento.
+
+## History/Histórico
+Consulte as [Releases](https://github.com/LeoMdrs/alurakut-app/releases) para acompanhar as alterações feitas no projeto.
+
+## License/Licença do Projeto
+[MIT License](https://github.com/LeoMdrs/alurakut-app/blob/main/LICENSE)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Example app with styled-components
 
 This example features how you use a different styling solution than [styled-jsx](https://github.com/vercel/styled-jsx) that also supports universal styles. That means we can serve the required styles for the first render within the HTML and then load the rest in the client. In this case we are using [styled-components](https://github.com/styled-components/styled-components).
