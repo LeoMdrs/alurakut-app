@@ -29,7 +29,6 @@ Consulte as [Releases](https://github.com/LeoRangel/alurakut-app/releases) para 
 
 <details>
 <summary>Iniciar Projeto NextJs</summary>
-<br />
 
 #### Criar app Next simplificado
 ```bash
@@ -40,13 +39,12 @@ yarn create-next-app --example with-styled-components
 ```bash
 yarn dev
 ```
-<br><br>
+<br />
 </details>
 
 
 <details>
-<summary>Dicas</summary>
-<br />
+<summary>Dicas e informações</summary>
 
 #### Pasta pages
 As páginas do site são arquivos dentro da pasta pages. Ex.: index.js, login.js, etc.
@@ -92,13 +90,12 @@ Hook que gerencia os efeitos colaterais nos componentes funcionais do React
 #### Fetch()
 A API Fetch fornece uma interface JavaScript para acessar e manipular partes do pipeline HTTP, tais como os pedidos e respostas. Ela também fornece o método global fetch() que fornece uma maneira fácil e lógica para buscar recursos de forma assíncrona através da rede
 
-<br><br>
+<br />
 </details>
 
 
 <details>
 <summary>Sintaxe</summary>
-<br />
 
 ##### importando lib
 ```javascript
@@ -232,7 +229,7 @@ const comunidade = ['valor1', 'valor2']
 ##### JSON.stringify()
 converte um valor para uma notação JSON que o representa
 
-<br><br>
+<br />
 </details>
 
 
@@ -240,7 +237,6 @@ converte um valor para uma notação JSON que o representa
 
 <details>
 <summary>Dato CMS</summary>
-<br />
 
 ##### GraphQL
 Linguagem usada para acessar api's no Dato CMS
@@ -284,7 +280,7 @@ fetch('https://graphql.datocms.com/', {
 // })
 ```
 
-<br><br>
+<br />
 </details>
 
 
@@ -292,7 +288,6 @@ fetch('https://graphql.datocms.com/', {
 
 <details>
 <summary>Rotas</summary>
-<br />
 
 ##### Rotas do NextJs
 ```javascript
@@ -302,13 +297,12 @@ import { useRouter } from 'next/router';
 ##### Pasta pages
 O Next vai utilizar essa pasta para descobrir as rotas
 
-<br><br>
+<br />
 </details>
 
 
 <details>
 <summary>Nookies (cookies)</summary>
-<br />
 
 ##### O que é
 Biblioteca de cookies para usar com NextJs que trabalho tanto no client-side como no server-side
@@ -328,13 +322,12 @@ nookies.set(null, 'USER_TOKEN', token, {
 })
 ```
 
-<br><br>
+<br />
 </details>
 
 
 <details>
 <summary>JsonWebToken</summary>
-<br />
 
 ##### O que é
 Biblioteca para decodificar cookies no formato JWT (Json Web Tokens)
@@ -343,5 +336,5 @@ Biblioteca para decodificar cookies no formato JWT (Json Web Tokens)
 ```bash
 yarn add jsonwebtoken
 ```
-<br><br>
+<br />
 </details
