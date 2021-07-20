@@ -40,8 +40,8 @@ yarn create-next-app --example with-styled-components
 ```bash
 yarn dev
 ```
+<br><br>
 </details>
-
 
 
 <details>
@@ -80,20 +80,20 @@ img {
 }
 ```
 
-### Nomear funções de forma que ajude a desenvolvedores react entender
+#### Nomear funções de forma que ajude a desenvolvedores react entender
 Ex.: Usar palavra handle para funções de pegar/capturar ação
 
-### Promise
+#### Promise
 Um objeto usado para processamento assíncrono. Um Promise ( de "promessa") representa um valor que pode estar disponível agora, no futuro ou nunca.
 
-### useEffect()
+#### useEffect()
 Hook que gerencia os efeitos colaterais nos componentes funcionais do React
 
-### Fetch()
+#### Fetch()
 A API Fetch fornece uma interface JavaScript para acessar e manipular partes do pipeline HTTP, tais como os pedidos e respostas. Ela também fornece o método global fetch() que fornece uma maneira fácil e lógica para buscar recursos de forma assíncrona através da rede
 
+<br><br>
 </details>
-
 
 
 <details>
@@ -232,8 +232,8 @@ const comunidade = ['valor1', 'valor2']
 ##### JSON.stringify()
 converte um valor para uma notação JSON que o representa
 
+<br><br>
 </details>
-
 
 
 
@@ -284,8 +284,8 @@ fetch('https://graphql.datocms.com/', {
 // })
 ```
 
+<br><br>
 </details>
-
 
 
 
@@ -302,8 +302,8 @@ import { useRouter } from 'next/router';
 ##### Pasta pages
 O Next vai utilizar essa pasta para descobrir as rotas
 
+<br><br>
 </details>
-
 
 
 <details>
@@ -328,8 +328,8 @@ nookies.set(null, 'USER_TOKEN', token, {
 })
 ```
 
+<br><br>
 </details>
-
 
 
 <details>
@@ -343,4 +343,5 @@ Biblioteca para decodificar cookies no formato JWT (Json Web Tokens)
 ```bash
 yarn add jsonwebtoken
 ```
-</details>
+<br><br>
+</details
