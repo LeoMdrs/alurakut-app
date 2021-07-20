@@ -105,7 +105,18 @@ yarn dev
 ## Dicas
 
 ### Pasta pages
-Pasta super importante para o Next. Colocar apenas arquivos importantes, de configuração de páginas, roteamento, etc...
+As páginas do site são arquivos dentro da pasta pages. Ex.: index.js, login.js, etc.
+Pasta super importante para o Next. Colocar apenas arquivos importantes, de configuração de páginas, roteamento, etc.
+
+### Pasta pages/api
+Colocar as apis dentro desta pasta. Aqui se colocam os BFF's, "mini backends" que são executados pelo NextJs
+
+### BFF - Backend For Frontend
+"mini backend" para executar com o frontend pelo NextJs e acessar api's, por exemplo, sem a necessidade de um backend completo
+
+### No React tudo que se coloca no template é o que retorna uma expressão
+Ex.: O IF normal não funciona no React, o IF Ternário funciona
+Ex.: O FOREACH não funciona no React, o MAP funciona
 
 ### Reset CSS
 * {
@@ -165,6 +176,9 @@ const Box = styled.div`
 ### Usando variável no componente
 <a href={link}></a>
 
+### Inserir variável no meio de string (Ex.:)
+`https://api.github.com/users/${githubUser}/followers`
+
 ### Usar classe no componente
 <img src={`https://github.com/${githubUser}.png`} /> (nesse exemplo, a sintaxe exclusiva do react é só o {} externo, o `` é Javascript)
 
@@ -188,7 +202,7 @@ const GlobalStyle = createGlobalStyle`
 ### Criando componente que estiliza outro componente criado
 export const Componente1 = styled(Componente2)`
 
-### React.useState()
+### Estado com React.useState()
 
 #### Importação
 import React from 'react'
@@ -239,7 +253,7 @@ Linguagem usada para acessar api's no Dato CMS
 ### Comando sugerir
 ctrl + d ou ctrl + espaço
 
-### Instalar o cliente NodeJS (para criar bff - mini backend que acessa api)
+### Instalar o cliente NodeJS (para criar bff)
 yarn add datocms-client
 
 ### API
@@ -270,3 +284,46 @@ fetch('https://graphql.datocms.com/', {
 // .then(function (response) {
 //   return response.json()
 // })
+
+
+
+
+
+
+## Rotas
+
+### Rotas do NextJS
+import { useRouter } from 'next/router';
+
+### Pasta pages
+O Next vai utilizar essa pasta para descobrir as rotas
+
+
+
+## Nookies (cookies)
+
+### O que é
+Biblioteca de cookies para usar com NextJS que trabalho tanto no client-side como no server-side
+
+### Instalar Nookies
+yarn add nookies
+
+### Criar/setar cookie com Nookies
+// Usando cookies para armazenar os dados (do token) na rota/página "/"
+// (null, nome do cookie, dado/valor, informações{rota, tempo de vida})
+nookies.set(null, 'USER_TOKEN', token, {
+    path: '/',
+    maxAge: 86400 * 7
+})
+
+
+
+
+## JsonWebToken
+
+### O que é
+Biblioteca para decodificar cookies no formato JWT (Json Web Tokens)
+
+### Instalar Nookies
+yarn add jsonwebtoken
+

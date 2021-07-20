@@ -1,5 +1,7 @@
 import React from 'react'
-// import styled from 'styled-components'
+import nookies from 'nookies';
+import jwt from 'jsonwebtoken';
+
 import Box from '../src/components/Box'
 import MainGrid from '../src/components/MainGrid'
 import { ProfileRelationsBoxWrapper } from '../src/components/ProfileRelations';
@@ -46,9 +48,9 @@ function ProfileRelationsBox(propriedades) {
   )
 }
 
-export default function Home() {
+export default function Home(props) {
 
-  const githubUser = 'LeoMdrs';
+  const githubUser = props.githubUser;
 
   // React.useState retorna duas coisas: na primeira posição (índice [0]) um array e na segunda (índice [1]) uma função que altera esse array
   // as variáveis definidas dentro do [ , ] vão receber esses valores, respectivamente
@@ -68,8 +70,8 @@ export default function Home() {
   React.useEffect(function () {
 
     // GET
-    // 0 - Pegar o array de dados do github 
-    fetch('https://api.github.com/users/LeoMdrs/followers')
+    // 0 - Pegar o array de dados do github
+    fetch(`https://api.github.com/users/${githubUser}/followers`)
       .then(function (respostaDoServidor) {
         return respostaDoServidor.json();
       })
@@ -235,4 +237,40 @@ export default function Home() {
       </MainGrid>
     </>
   )
+}
+
+
+
+export async function getServerSideProps(context) {
+
+  // Pegando o cookie de usuário autenticado
+  const cookies = nookies.get(context)
+  const token = cookies.USER_TOKEN;
+  // Acessando api de verificar se usuário é autenticado criada pela alura
+  // e armazendo a resposta na variável isAuthenticated
+  const { isAuthenticated } = await fetch('https://alurakut.vercel.app/api/auth', {
+    headers: {
+      Authorization: token
+    }
+  })
+    .then((resposta) => resposta.json())
+
+  // Verificando se o usuário está autenticado e redirecionando para login, se não
+  if (!isAuthenticated) {
+    return {
+      redirect: {
+        destination: '/login',
+        permanent: false,
+      }
+    }
+  }
+
+  // Usando biblioteca para decodificar o Token do cookie do formato jwt
+  // e passando os dados do token (que é um user do github) para esta página (Home) como uma propriedade (props)
+  const { githubUser } = jwt.decode(token);
+  return {
+    props: {
+      githubUser
+    }, // will be passed to the page component as props
+  }
 }
