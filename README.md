@@ -1,14 +1,14 @@
 # Alurakut: Leandro Rangel 
 
-[![Série](https://img.shields.io/badge/LeoMdrs-Alurakut--App-green](https://github.com/LeoMdrs/alurakut-app)
-[![licence mit](https://img.shields.io/github/license/LeoMdrs/alurakut-app)](https://github.com/LeoMdrs/alurakut-app/blob/main/LICENSE)
+[![Repositório](https://img.shields.io/badge/LeoRangel-AlurakutApp-green](https://github.com/LeoRangel/alurakut-app)
+[![licence mit](https://img.shields.io/github/license/LeoRangel/alurakut-app)](https://github.com/LeoRangel/alurakut-app/blob/main/LICENSE)
 
 > Projeto de App clone da rede social Orkut desenvolvido durante a Imersão React da Alura
 > 
-> Para ver o projeto em execução acesse a [**DEMO**](https://alurakut-app-brown.vercel.app/login/)
+> Para ver o projeto em execução acesse a [**demo**](https://alurakut-app-brown.vercel.app/login/)
 
 <p align="center">
-  <img alt="Tela de login do projeto" src="./src/assets/images/tela-login.jpeg" />
+  <img alt="Tela de login do projeto" src="./src/assets/images/tela-login.png" />
 </p>
 
 
@@ -17,10 +17,10 @@
 Esse projeto não possui um sistema de versionamento.
 
 ## History/Histórico
-Consulte as [Releases](https://github.com/LeoMdrs/alurakut-app/releases) para acompanhar as alterações feitas no projeto.
+Consulte as [Releases](https://github.com/LeoRangel/alurakut-app/releases) para acompanhar as alterações feitas no projeto.
 
 ## License/Licença do Projeto
-[MIT License](https://github.com/LeoMdrs/alurakut-app/blob/main/LICENSE)
+[MIT License](https://github.com/LeoRangel/alurakut-app/blob/main/LICENSE)
 
 
 
